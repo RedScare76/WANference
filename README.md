@@ -24,6 +24,8 @@ Specializing in DeepSeek-V4-Flash helps with this distribution: the speculative 
 
 The recorded experiments evaluate this approach on two DGX Sparks. Additional, controlled network latency simulates one characteristic of internet connections. At a target application round-trip time of 95 ms, WANference achieved up to 60% higher throughput than llama.cpp. This comparison covers the entire measured generation process, including prompt processing; decode-only speed is reported separately. Experiment conditions, individual measurements and additional latency values are available in the [benchmark report](benchmark-results/).
 
+![WANference and llama.cpp benchmark results across network latencies](benchmark-results/0-overview/graphs/latency-sweep.svg)
+
 This repository contains the engine, the benchmark runner, a fixed benchmark input and recorded measurement results. The following guide describes how to set up and run _WANference greedy_ and _WANference DSpark_ on two DGX Sparks. Model weights are downloaded separately.
 
 # Running the benchmark
